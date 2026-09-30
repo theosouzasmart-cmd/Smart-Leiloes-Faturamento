@@ -30,6 +30,7 @@ body{background:var(--bg);color:var(--fg);font-family:var(--font-ui);font-size:1
 .app{display:grid;grid-template-columns:250px minmax(0,1fr);min-height:100vh}
 .side{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--navy);color:var(--on-navy);padding:18px 12px;display:flex;flex-direction:column;gap:16px}
 .logo{display:flex;align-items:center;gap:10px;color:var(--brand);text-decoration:none}
+.logo img{max-width:100%;height:auto;}
 .logo svg{width:38px;height:38px;flex:none}
 .logo b{display:block;font-size:19px;font-weight:800;letter-spacing:.06em;line-height:1}
 .logo span{display:block;font-size:11.5px;font-weight:700;letter-spacing:.32em;line-height:1.4;margin-top:2px}
@@ -109,7 +110,9 @@ select:focus-visible,input:focus-visible,textarea:focus-visible,button:focus-vis
 
 <section class="login" id="tela-login">
   <form id="form-login">
-    <div class="logo logo-login" aria-label="Smart Leilões"><svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#ff6b35"/><g fill="#0d2747"><rect x="12" y="8.5" width="13" height="7.5" rx="2" transform="rotate(45 18.5 12.25)"/><rect x="19.8" y="17.2" width="4" height="15" rx="2" transform="rotate(-45 21.8 24.7)"/><rect x="7" y="28.5" width="14" height="4" rx="2"/></g></svg><div><b>SMART</b><span>LEILÕES</span></div></div>
+    <div class="logo logo-login" aria-label="Smart Leilões">
+      <img src="logo.png" alt="Smart Leilões" style="width:200px; height:auto;">
+    </div>
     <div><div class="eyebrow">Sistema de faturamento</div><h1>Entrar</h1></div>
     <label>E-mail<input type="email" id="email" placeholder="seu@email.com" autocomplete="username" required></label>
     <label>Senha<input type="password" id="senha" placeholder="••••••••" autocomplete="current-password" required></label>
@@ -120,7 +123,9 @@ select:focus-visible,input:focus-visible,textarea:focus-visible,button:focus-vis
 
 <div class="app" id="tela-app" hidden>
 <aside class="side">
-  <div class="logo" aria-label="Smart Leilões"><svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#ff6b35"/><g fill="#ffffff"><rect x="12" y="8.5" width="13" height="7.5" rx="2" transform="rotate(45 18.5 12.25)"/><rect x="19.8" y="17.2" width="4" height="15" rx="2" transform="rotate(-45 21.8 24.7)"/><rect x="7" y="28.5" width="14" height="4" rx="2"/></g></svg><div><b>SMART</b><span>LEILÕES</span></div></div>
+  <div class="logo" aria-label="Smart Leilões">
+    <img src="logo.png" alt="Smart Leilões" style="width:180px; height:auto;">
+  </div>
   <label class="side-field">Empresa<select id="f-emp"><option>Smart Leilões - Matriz</option><option>Smart Leilões - SP</option><option>Smart Leilões - RJ</option></select></label>
   <nav class="side-nav" aria-label="Menu">
     <button type="button" data-aba="inicio" aria-current="page"><span class="lbl"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg>Início</span></button>
